@@ -1,0 +1,77 @@
+.info-content {
+    width: 40%;
+    flex: 1;
+    margin-right: 20%;
+}
+
+.my-name {
+    color: var(--font-color);
+
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.my-job {
+    color: #4F46E5;
+
+    font-weight: 500;
+}
+
+.job-description {
+    color: #526077;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+.download-cv-btn {
+    background-color: var(--home-downloadcv-bg);
+    padding: 12px;
+    margin: 0 20px;
+    border-radius: 7px;
+    border: 1px solid var(--border-nav-color);
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.view-projects-btn {
+    background-color: var(--button-bg-color);
+    padding: 12px;
+    margin: 0 20px;
+    border-radius: 7px;
+    color: var(--font-button-color);
+    border: none;
+    cursor: pointer;
+}
+
+.my-pic-container {
+    width: 30%;
+}
+
+.my-pic {
+    width: 90%;
+    border-radius: 20px;
+    margin-top: 100px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .my-info-section {
+        flex-direction: column-reverse;
+
+    }
+
+    .info-content {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .my-pic-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .my-pic {
+        width: 100%;
+        margin-top: 0;
+    }
+}

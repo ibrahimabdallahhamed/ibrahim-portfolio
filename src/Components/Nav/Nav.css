@@ -1,0 +1,200 @@
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    padding: 20px 80px;
+    border-bottom: 1px solid var(--border-nav-color);
+    align-items: center;
+    position: relative;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    color: var(--font-button-color);
+
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+
+
+.code-icon {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 20px;
+    padding: 10px 8px;
+    color: var(--nav-code-icon-color);
+    background-color: var(--button-bg-color);
+    border-radius: 10px;
+}
+
+.icon-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-name h1 {
+    margin-left: 20px;
+    color: var(--font-color);
+    font-size: 28px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    width: max-content;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+
+}
+
+
+
+.nav-links a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+    padding: 10px 20px;
+    font-weight: 500;
+
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--nav-link-active-bg-color);
+    border-radius: 12px;
+    color: var(--nav-font-active);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-mode img {
+    width: 20px;
+}
+
+.toggle-mode {
+    border: 2px solid var(--border-nav-color);
+    padding: 8px;
+    border-radius: 50%;
+
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.hire-btn {
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--button-bg-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.list-icon-btn {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+@media(max-width: 1024px) {
+    .nav-bar {
+        padding: 15px 20px;
+        position: relative;
+
+
+        z-index: 100;
+
+    }
+
+    .list-icon-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: var(--border-nav-color) solid 2px;
+        padding: 8px;
+        border-radius: 10px;
+        background-color: var(--button-bg-color);
+    }
+
+    .list-icon {
+        width: 30px;
+        fill: var(--nav-code-icon-color);
+    }
+
+    .nav-actions {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        border-bottom: 1px solid var(--border-nav-color);
+        padding: 20px 0;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        height: 100vh;
+
+    }
+
+    .nav-links {
+
+        left: 0;
+        top: 10px;
+        transform: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        width: 80%;
+        text-align: center;
+        font-size: 18px;
+
+    }
+
+    .nav-actions.active {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        position: absolute;
+        top: 300px;
+        justify-content: center;
+        gap: 80px;
+        width: 80%;
+
+    }
+
+    .hire-btn {
+        flex: 1;
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .toggle-mode img {
+        width: 30px;
+
+    }
+}
