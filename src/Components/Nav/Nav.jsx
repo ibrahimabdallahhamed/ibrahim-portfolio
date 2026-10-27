@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import ListIcon from "../../assets/list-solid-full.svg?react";
 import "./Nav.css";
@@ -14,14 +14,15 @@ export default function Nav() {
     const theme = dark ? "dark" : "light";
     document.body.setAttribute("data-theme", theme);
   }
-  function listHandle() {
-    setIsOpen(!isOpen);
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
 
-    if (!isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
+    return () => {
       document.body.style.overflow = "auto";
-    }
+    };
+  }, [isOpen]);
+  function listHandle() {
+    setIsOpen((prev) => !prev);
   }
   return (
     <nav className="nav-bar">

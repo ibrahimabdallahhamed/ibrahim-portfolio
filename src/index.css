@@ -11,6 +11,14 @@ body {
 
 }
 
+html,
+body {
+
+
+  /* السماح بالنزول والطلوع بشكل طبيعي */
+  height: 100%;
+}
+
 :root {
   --bg-color: #FFFFFF;
   --border-nav-color: rgb(203, 201, 201);

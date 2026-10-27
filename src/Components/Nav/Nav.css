@@ -118,10 +118,7 @@ button:hover {
     .nav-bar {
         padding: 15px 20px;
         position: relative;
-
-
         z-index: 100;
-
     }
 
     .list-icon-btn {

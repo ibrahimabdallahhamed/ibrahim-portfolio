@@ -24,9 +24,9 @@
 }
 
 .download-cv-btn {
+
     background-color: var(--home-downloadcv-bg);
-    padding: 12px;
-    margin: 0 20px;
+    padding: 10px;
     border-radius: 7px;
     border: 1px solid var(--border-nav-color);
     color: var(--font-color);
@@ -34,12 +34,12 @@
 }
 
 .view-projects-btn {
+
     background-color: var(--button-bg-color);
-    padding: 12px;
-    margin: 0 20px;
+    padding: 10px;
     border-radius: 7px;
     color: var(--font-button-color);
-    border: none;
+    border: 1px solid var(--border-nav-color);
     cursor: pointer;
 }
 

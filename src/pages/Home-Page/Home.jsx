@@ -32,12 +32,14 @@ export default function Home() {
             focused on writing clean code and delivering seamless user
             experiences.
           </p>
-          <button className="view-projects-btn">
-            View Projects <FontAwesomeIcon icon={faArrowRight} />
-          </button>
-          <button className="download-cv-btn">
-            <FontAwesomeIcon icon={faDownload} /> Download Cv
-          </button>
+          <div className="flex justify-between items-center sm:justify-start text-[16px] sm:text-[20px] ">
+            <button className="view-projects-btn sm:mr-[20px] ">
+              View Projects <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+            <button className="download-cv-btn ">
+              <FontAwesomeIcon icon={faDownload} /> Download Cv
+            </button>
+          </div>
         </div>
         <div className="my-pic-container relative py-[10px] max-w-[500px]">
           <img
@@ -81,65 +83,65 @@ export default function Home() {
         <div className="grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
           {" "}
           <p
-            className=" text-[var(--font-color)] text-[20px] 
+            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
             border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[15px] py-[2px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3"
+            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
           >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[15px] h-[15px] rounded-[50%] mr-[20px]"></span>
+            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
             React
           </p>
           {/* ------------------------------------------------------------------- */}
           <p
-            className=" text-[var(--font-color)] text-[20px] 
+            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
             border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[15px] py-[2px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3"
+            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
           >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[15px] h-[15px] rounded-[50%] mr-[20px]"></span>
+            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
             TypeScript
           </p>
           {/* ------------------------------------------------------------------- */}
           <p
-            className=" text-[var(--font-color)] text-[20px] 
+            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
             border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[15px] py-[2px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3"
+            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
           >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[15px] h-[15px] rounded-[50%] mr-[20px]"></span>
+            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
             JavaScript
           </p>
           {/* ------------------------------------------------------------------- */}
           <p
-            className=" text-[var(--font-color)] text-[20px] 
+            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
             border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[15px] py-[2px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3"
+            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
           >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[15px] h-[15px] rounded-[50%] mr-[20px]"></span>
+            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
             Tailwind CSS
           </p>
           {/* ------------------------------------------------------------------- */}
           <p
-            className=" text-[var(--font-color)] text-[20px] 
+            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
             border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[15px] py-[2px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3"
+            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
           >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[15px] h-[15px] rounded-[50%] mr-[20px]"></span>
+            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
             HTML & CSS
           </p>
           {/* ------------------------------------------------------------------- */}
           <p
-            className=" text-[var(--font-color)] text-[20px] 
+            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
             border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[15px] py-[2px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3"
+            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
           >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[15px] h-[15px] rounded-[50%] mr-[20px]"></span>
+            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
             Git & GitHub
           </p>
           {/* ------------------------------------------------------------------- */}
           <p
-            className=" text-[var(--font-color)] text-[20px] 
+            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
             border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[15px] py-[2px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3"
+            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
           >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[15px] h-[15px] rounded-[50%] mr-[20px]"></span>
+            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
             Figma
           </p>
         </div>
@@ -156,6 +158,6 @@ export default function Home() {
 
 let styles = {
   Container: {
-    padding: "0 50px",
+    padding: "0 20px",
   },
 };
