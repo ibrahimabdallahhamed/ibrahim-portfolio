@@ -5,11 +5,13 @@ import { coldarkCold } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
 import myPic from "../../assets/my-photo.png";
+import ProjectCard from "../../Components/ProjectCard";
+import Skills from "../../Components/Skills";
 
 export default function Home() {
   return (
-    <main className="home" style={styles.Container}>
-      <section className="my-info-section flex flex-col md:flex-row justify-center itema-center">
+    <main className="home px-[20px] sm:px-[50px]">
+      <section className="my-info-section flex flex-col md:flex-row justify-center items-center ">
         {" "}
         <div className="info-content">
           <p
@@ -48,7 +50,7 @@ export default function Home() {
             className="my-pic border border-solid border-[var(--border-nav-color)] "
           />
 
-          <div className="bg-[var(--bg-color)] rounded-[15px] absolute bottom-0 left-[-40px] p-[10px] border border-solid border-[var(--border-nav-color)] shadow-lg">
+          <div className="bg-[var(--bg-color)] rounded-[15px] absolute bottom-0 left-[-20px] p-[10px] border border-solid border-[var(--border-nav-color)] shadow-lg">
             <div className="flex gap-2 mb-2 px-2">
               <span className="inline-block bg-[#526077] w-[10px] h-[10px] rounded-[50%]"></span>
               <span className="inline-block bg-[#526077] w-[10px] h-[10px] rounded-[50%]"></span>
@@ -82,68 +84,19 @@ export default function Home() {
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4">
           {" "}
-          <p
-            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
-            border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
-          >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
-            React
-          </p>
+          <Skills skill="React" />
           {/* ------------------------------------------------------------------- */}
-          <p
-            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
-            border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
-          >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
-            TypeScript
-          </p>
+          <Skills skill="TypeScript" />
           {/* ------------------------------------------------------------------- */}
-          <p
-            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
-            border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
-          >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
-            JavaScript
-          </p>
+          <Skills skill="JavaScript" />
           {/* ------------------------------------------------------------------- */}
-          <p
-            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
-            border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
-          >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
-            Tailwind CSS
-          </p>
+          <Skills skill="Tailwind CSS" />
           {/* ------------------------------------------------------------------- */}
-          <p
-            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
-            border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
-          >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
-            HTML & CSS
-          </p>
+          <Skills skill="HTML & CSS" />
           {/* ------------------------------------------------------------------- */}
-          <p
-            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
-            border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
-          >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
-            Git & GitHub
-          </p>
+          <Skills skill="Git & GitHub" />
           {/* ------------------------------------------------------------------- */}
-          <p
-            className=" text-[var(--font-color)] text-[16px] sm:text-[20px]
-            border border-solid border-[var(--border-nav-color)] rounded-full
-            px-[10px] py-[0px] w-[max-content] bg-[var(--home-downloadcv-bg)] mb-3 flex items-center"
-          >
-            <span className="inline-block bg-[var(--button-bg-color)] w-[10px] h-[10px] rounded-[50%] mr-[10px]"></span>
-            Figma
-          </p>
+          <Skills skill="Figma" />
         </div>
       </section>
       <section>
@@ -151,13 +104,8 @@ export default function Home() {
         <h2 className="text-[46px] font-[900] mb-10 text-[var(--font-color)]">
           Selected Projects
         </h2>
+        <ProjectCard />
       </section>
     </main>
   );
 }
-
-let styles = {
-  Container: {
-    padding: "0 20px",
-  },
-};

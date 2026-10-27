@@ -25,11 +25,12 @@ body {
   --nav-code-icon-color: #FFFFFF;
   --button-bg-color: #4F46E5;
   --nav-link-color: #526077;
-  --font-color: dark;
+  --font-color: black;
   --nav-font-active: #4F46E5;
   --nav-link-active-bg-color: #EEF0FD;
   --home-downloadcv-bg: #FFFFFF;
   --font-button-color: #FFFFFF;
+  --project-card-bg: #F4F6FA;
 }
 
 [data-theme="dark"] {
@@ -41,6 +42,7 @@ body {
   --nav-link-color: #9AA4B5;
   --nav-link-active-bg-color: #1E2330;
   --home-downloadcv-bg: #181C25;
+  --project-card-bg: #12151C;
 
 }
 
