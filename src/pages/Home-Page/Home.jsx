@@ -10,7 +10,7 @@ import Skills from "../../Components/Skills";
 
 export default function Home() {
   return (
-    <main className="home px-[20px] sm:px-[50px]">
+    <main className="px-[20px] sm:px-[50px] pb-[50px]">
       <section className="my-info-section flex flex-col md:flex-row justify-center items-center ">
         {" "}
         <div className="info-content">

@@ -34,7 +34,6 @@ export default function Nav() {
         <div className="nav-links">
           <NavLink
             to="/home"
-            className="link-active"
             onClick={() => {
               setIsOpen(false);
             }}

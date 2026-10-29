@@ -31,6 +31,8 @@ body {
   --home-downloadcv-bg: #FFFFFF;
   --font-button-color: #FFFFFF;
   --project-card-bg: #F4F6FA;
+
+
 }
 
 [data-theme="dark"] {
@@ -43,6 +45,8 @@ body {
   --nav-link-active-bg-color: #1E2330;
   --home-downloadcv-bg: #181C25;
   --project-card-bg: #12151C;
+
+
 
 }
 
