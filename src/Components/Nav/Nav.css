@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     background-color: var(--bg-color);
-    padding: 20px;
+    padding: 20px 50px;
     border-bottom: 1px solid var(--border-nav-color);
     align-items: center;
     position: relative;
@@ -11,9 +11,7 @@
 
 button {
     cursor: pointer;
-    border: none;
     transition: transform 0.2s ease, background-color 0.2s ease;
-    color: var(--font-button-color);
 }
 
 button:hover {

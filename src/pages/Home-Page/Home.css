@@ -30,7 +30,7 @@
     border-radius: 7px;
     border: 1px solid var(--border-nav-color);
     color: var(--font-color);
-    cursor: pointer;
+
 }
 
 .view-projects-btn {
@@ -39,8 +39,8 @@
     padding: 10px;
     border-radius: 7px;
     color: var(--font-button-color);
-    border: 1px solid var(--border-nav-color);
-    cursor: pointer;
+
+
 }
 
 .my-pic-container {

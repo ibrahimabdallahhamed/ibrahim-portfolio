@@ -54,7 +54,9 @@ export default function Nav() {
           <button className="toggle-mode" onClick={togglMode}>
             <img src={dark ? navbarSelectionImg : darkSelectionImg} />
           </button>
-          <button className="hire-btn">Hire me</button>
+          <button className="hire-btn text-[var(--font-button-color)]">
+            Hire me
+          </button>
         </div>
       </section>
       <button className="list-icon-btn" onClick={listHandle}>

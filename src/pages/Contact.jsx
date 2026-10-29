@@ -14,9 +14,9 @@ export default function Contact() {
         </p>
       </section>
       <section className="flex flex-col md:flex-row justify-between items-center gap-[5%] ">
-        <section className=" bg-[var( --contact-message-bg)] mb-[50px] flex-1 sm:w-[50%] mt-[20px] border-1 border-[var(--border-nav-color)] rounded-[7px]  p-[20px]">
+        <section className=" bg-[var( --contact-message-bg)] mb-[50px] flex-1 w-[100%] sm:w-[40%] mt-[20px] border-1 border-[var(--border-nav-color)] rounded-[7px]  p-[20px]">
           <form>
-            <div className="flex justify-between gap-[10px] ">
+            <div className="flex flex-col md:flex-row justify-between gap-[10px] ">
               <div>
                 <label
                   name="name"
@@ -76,7 +76,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="bg-[var(--button-bg-color)] px-[10px] py-[7px] rounded-[10px] mt-[20px]"
+              className="text-[var(--font-button-color)] bg-[var(--button-bg-color)] px-[10px] py-[7px] rounded-[10px] mt-[20px]"
             >
               Send message{" "}
               <FontAwesomeIcon
@@ -86,7 +86,7 @@ export default function Contact() {
             </button>
           </form>
         </section>
-        <section>
+        <section className="w-[100%] sm:w-[40%]">
           <p
             className="mb-10 text-[var(--nav-link-color)] text-[20px] 
             border border-solid border-[var(--border-nav-color)] rounded-full
@@ -96,49 +96,49 @@ export default function Contact() {
             Available for work
           </p>
           {/* --------------------------------------------------------------------------------------------------------------- */}
-          <div className="flex items-center gap-[25px] border-2 border-[var(--border-nav-color)] p-[20px] rounded-[20px] mb-[20px]">
+          <div className="flex items-center gap-[15px] sm:gap-[25px] border-2 border-[var(--border-nav-color)] py-[20px] px-[10px] sm:px-[20px] rounded-[20px] mb-[20px]">
             <p className="p-[15px] text-[15px] bg-[var(--nav-link-active-bg-color)] text-[var(--button-bg-color)] rounded-[10px] ">
               @
             </p>
             <p>
               <p className="text-[var(--nav-link-color)] ">Email</p>
-              <p className="text-[18px] font-[500] text-[var(--font-color)] ">
+              <p className="text-[14px] sm:text-[18px] font-[500] text-[var(--font-color)]  ">
                 eng.ibrahimabdallah2024@gmail.com
               </p>
             </p>
           </div>
           {/* --------------------------------------------------------------------------------------------------------------- */}
-          <div className="flex items-center gap-[25px] border-2 border-[var(--border-nav-color)] p-[20px] rounded-[20px] mb-[20px] ">
+          <div className="flex items-center gap-[15px] sm:gap-[25px] border-2 border-[var(--border-nav-color)] py-[20px] px-[10px] sm:px-[20px] rounded-[20px] mb-[20px] ">
             <p className="p-[15px] text-[15px] bg-[var(--nav-link-active-bg-color)] text-[var(--button-bg-color)] rounded-[10px] ">
               in
             </p>
             <p>
               <p className="text-[var(--nav-link-color)] ">Linkedin</p>
-              <p className="text-[18px] font-[500] text-[var(--font-color)] ">
+              <p className="text-[14px] sm:text-[18px] font-[500] text-[var(--font-color)] ">
                 linkedin.com/in/ibrahim-abdallah2024/
               </p>
             </p>
           </div>
           {/* --------------------------------------------------------------------------------------------------------------- */}
-          <div className="flex items-center gap-[25px] border-2 border-[var(--border-nav-color)] p-[20px] rounded-[20px] mb-[20px] ">
+          <div className="flex items-center gap-[15px] sm:gap-[25px] border-2 border-[var(--border-nav-color)] py-[20px] px-[10px] sm:px-[20px] rounded-[20px] mb-[20px] ">
             <p className="p-[15px] text-[15px] bg-[var(--nav-link-active-bg-color)] text-[var(--button-bg-color)] rounded-[10px] ">
               gh
             </p>
             <p>
               <p className="text-[var(--nav-link-color)] ">GitHub</p>
-              <p className="text-[18px] font-[500] text-[var(--font-color)] ">
+              <p className="text-[14px] sm:text-[18px] font-[500] text-[var(--font-color)] ">
                 github.com/ibrahimabdallahhamed
               </p>
             </p>
           </div>
           {/* --------------------------------------------------------------------------------------------------------------- */}
-          <div className="flex items-center gap-[25px] border-2 border-[var(--border-nav-color)] p-[20px] rounded-[20px] mb-[20px] ">
+          <div className="flex items-center gap-[15px] sm:gap-[25px] border-2 border-[var(--border-nav-color)] py-[20px] px-[10px] sm:px-[20px] rounded-[20px] mb-[20px] ">
             <p className="p-[15px] text-[15px] bg-[var(--nav-link-active-bg-color)] text-[var(--button-bg-color)] rounded-[10px] ">
               wa
             </p>
             <p>
               <p className="text-[var(--nav-link-color)] ">WhatsApp</p>
-              <p className="text-[18px] font-[500] text-[var(--font-color)] ">
+              <p className="text-[14px] sm:text-[18px] font-[500] text-[var(--font-color)] ">
                 +201148272793
               </p>
             </p>
