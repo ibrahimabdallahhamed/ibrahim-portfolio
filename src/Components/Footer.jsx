@@ -7,7 +7,9 @@ function Footer() {
     >
       <div>
         <h2 className="text-[28px] font-[700] mb-[10px]">Ibrahim Abdallah</h2>
-        <p>© 2026 Front-End Developer. All rights reserved.</p>
+        <p className="mb-[30px]">
+          © 2026 Front-End Developer. All rights reserved.
+        </p>
       </div>
       <ul className="flex  w-[100%] justify-between items-center md:w-[30%] text-[14px] md:text-[24px] md:mr-[100px]">
         <li className="bg-[var(--home-downloadcv-bg)] px-[12px] py-[7px] rounded-[10px]">

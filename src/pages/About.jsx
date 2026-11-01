@@ -2,8 +2,9 @@ import myPic from "../assets/my-photo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import Skills from "../Components/Skills";
-
+import { useNavigate } from "react-router-dom";
 export default function About() {
+  const navigate = useNavigate();
   let experianceCard = [
     {
       date: "[2026 – Present]",
@@ -55,7 +56,7 @@ export default function About() {
     },
   ];
   return (
-    <main className=" px-[20px] sm:px-[50px] pb-[50px]">
+    <main className=" px-[20px] sm:px-[50px] py-[50px]">
       <section className="flex flex-col md:flex-row  md:items-center md:gap-[5%]">
         <div className="w-full md:w-1/2 mb-[40px]">
           <img
@@ -65,7 +66,9 @@ export default function About() {
           />
         </div>
         <div className="">
-          <p className="text-[var(--nav-font-active)] mb-[30px]">// about me</p>
+          <p className="text-[var(--nav-font-active)] mb-[30px] text-[22px]">
+            // about me
+          </p>
           <h1 className="text-[36px] sm:text-[72px] font-[700] mb-[30px] text-[var(--font-color)] ">
             Developer who cares about the details.
           </h1>
@@ -85,10 +88,20 @@ export default function About() {
             devices.
           </p>
           <div className="flex justify-evenly items-center sm:justify-start text-[16px] sm:text-[20px] ">
-            <button className="sm:mr-[100px] p-[10px] rounded-[7px] bg-[var(--button-bg-color)] text-[var(--font-button-color)] ">
+            <a
+              href="https://drive.google.com/uc?export=download&id=16McDvaOeP5hqCdFVeETKfmHkymOsTjAA"
+              className="sm:mr-[100px] p-[10px] rounded-[7px] bg-[var(--button-bg-color)] text-[var(--font-button-color)]
+              hover:translate-y-[-2px] transition duration-200 ease-in-out transform
+              "
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faDownload} /> Download Cv
-            </button>
-            <button className="sm:mr-[20px] p-[10px] rounded-[7px] bg-[var(--home-downloadcv-bg)] text-[var(--font-color)] border-1 border-[var(--border-nav-color)]">
+            </a>
+            <button
+              className="sm:mr-[20px] p-[10px] rounded-[7px] bg-[var(--home-downloadcv-bg)] text-[var(--font-color)] border-1 border-[var(--border-nav-color)]"
+              onClick={() => navigate("/contact")}
+            >
               Contact me
             </button>
           </div>
@@ -96,7 +109,9 @@ export default function About() {
       </section>
       <section className="flex flex-col md:flex-row mt-[50px] md:justify-between gap-[5%]">
         <div>
-          <p className="text-[var(--nav-font-active)] mb-[30px]">// journey</p>
+          <p className="text-[var(--nav-font-active)] mb-[30px] text-[22px]">
+            // journey
+          </p>
           <h2 className="text-[36px] md:text-[46px] font-[900] mb-10 text-[var(--font-color)]">
             Experience & Education
           </h2>
@@ -122,7 +137,9 @@ export default function About() {
       </section>
       <section className=" ">
         <div>
-          <p className="text-[var(--nav-font-active)] my-[30px]">// skills</p>
+          <p className="text-[var(--nav-font-active)] my-[30px] text-[22px]">
+            // skills
+          </p>
           <h2 className="text-[36px] md:text-[46px] font-[900] mb-10 text-[var(--font-color)]">
             What I bring
           </h2>

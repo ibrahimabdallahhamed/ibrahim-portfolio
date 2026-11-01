@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 export default function Contact() {
   return (
-    <main className="px-[20px] sm:px-[50px]  mt-[50px] sm:px-[50px]">
+    <main className="px-[20px] sm:px-[50px]  py-[50px]">
       <section>
         <p className="text-[var(--nav-font-active)]">// contact</p>
         <h1 className="text-[72px] font-[700] mb-[10px] text-[var(--font-color)] ">

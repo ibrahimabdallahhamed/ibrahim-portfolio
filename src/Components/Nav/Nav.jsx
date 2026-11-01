@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import ListIcon from "../../assets/list-solid-full.svg?react";
@@ -7,6 +7,7 @@ import navbarSelectionImg from "../../assets/Navbar-selection.png";
 import darkSelectionImg from "../../assets/Dark-selection.png";
 
 export default function Nav() {
+  const navigate = useNavigate();
   let [dark, setDark] = useState(true);
   let [isOpen, setIsOpen] = useState(false);
   function togglMode() {
@@ -54,7 +55,10 @@ export default function Nav() {
           <button className="toggle-mode" onClick={togglMode}>
             <img src={dark ? navbarSelectionImg : darkSelectionImg} />
           </button>
-          <button className="hire-btn text-[var(--font-button-color)]">
+          <button
+            className="hire-btn text-[var(--font-button-color)]"
+            onClick={() => navigate("/contact")}
+          >
             Hire me
           </button>
         </div>

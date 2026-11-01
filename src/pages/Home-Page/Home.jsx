@@ -7,10 +7,36 @@ import { faArrowRight, faDownload } from "@fortawesome/free-solid-svg-icons";
 import myPic from "../../assets/my-photo.png";
 import ProjectCard from "../../Components/ProjectCard";
 import Skills from "../../Components/Skills";
-
+import { useNavigate } from "react-router-dom";
+import projectPic from "../../assets/pricing-page.png";
+import portofolioPic from "../../assets/portofolio.png";
 export default function Home() {
+  const nanigate = useNavigate();
+  let projects = [
+    {
+      header: "Synkra Projcet",
+      description:
+        "Built a responsive, theme-aware (light/dark) pricing page for Synkra in React, featuring a monthly/annual billing toggle with dynamic pricing and reusable plan-card components, including a highlighted “Popular” Pro tier. Also implemented the navbar, a hero section with custom typography, and a persistent cookie-consent banner, using hooks and component-based architecture.",
+      skills: ["React", "HTML", " CSS", "JavaScript", "Git & GitHub"],
+      pic: projectPic,
+    },
+    {
+      header: "My Portfolio",
+      description:
+        "Developed a responsive personal portfolio using React.js, Vite, Tailwind CSS, React Router, and FontAwesome, showcasing my skills, experience, and projects. Implemented reusable components, smooth navigation, interactive UI, dark theme, and responsive design, with deployment on GitHub Pages.",
+      skills: [
+        "React",
+        "HTML",
+        "Tailwind CSS",
+        "JavaScript",
+        "Git & GitHub",
+        "Figma",
+      ],
+      pic: portofolioPic,
+    },
+  ];
   return (
-    <main className="px-[20px] sm:px-[50px] pb-[50px]">
+    <main className="px-[20px] sm:px-[50px] py-[50px]">
       <section className="my-info-section flex flex-col md:flex-row justify-center items-center ">
         {" "}
         <div className="info-content">
@@ -35,12 +61,20 @@ export default function Home() {
             experiences.
           </p>
           <div className="flex justify-between items-center sm:justify-start text-[16px] sm:text-[20px] ">
-            <button className="view-projects-btn sm:mr-[20px] ">
+            <button
+              className="view-projects-btn sm:mr-[20px] "
+              onClick={() => nanigate("/projects")}
+            >
               View Projects <FontAwesomeIcon icon={faArrowRight} />
             </button>
-            <button className="download-cv-btn ">
+            <a
+              href="https://drive.google.com/uc?export=download&id=16McDvaOeP5hqCdFVeETKfmHkymOsTjAA"
+              className="download-cv-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faDownload} /> Download Cv
-            </button>
+            </a>
           </div>
         </div>
         <div className="my-pic-container relative py-[10px] max-w-[500px]">
@@ -78,7 +112,9 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-20 mb-20">
-        <p className="text-[var(--nav-font-active)]">// tech stack</p>
+        <p className="text-[var(--nav-font-active)] text-[22px] ">
+          // tech stack
+        </p>
         <h2 className="text-[46px] font-[900] mb-10 text-[var(--font-color)]">
           Tools I work with
         </h2>
@@ -100,11 +136,19 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <p className="text-[var(--nav-font-active)]">// Featured work</p>
+        <p className="text-[var(--nav-font-active)] text-[22px]">
+          // Featured work
+        </p>
         <h2 className="text-[46px] font-[900] mb-10 text-[var(--font-color)]">
           Selected Projects
         </h2>
-        <ProjectCard />
+        <div className="flex flex-col md:flex-row gap-[5%] ">
+          {projects.map((project) => (
+            <div className="mb-[20px] md:w-[45%]">
+              <ProjectCard prop={project} />
+            </div>
+          ))}
+        </div>
       </section>
     </main>
   );

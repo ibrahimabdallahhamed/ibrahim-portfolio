@@ -9,12 +9,14 @@
     position: relative;
 }
 
-button {
+button,
+.download-cv-btn {
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-button:hover {
+button:hover,
+.download-cv-btn:hover {
     transform: translateY(-2px);
 }
 
@@ -90,12 +92,12 @@ button:hover {
 .nav-btn {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
 
 }
 
 .hire-btn {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     background-color: var(--button-bg-color);
     padding: 10px 20px;
@@ -175,7 +177,7 @@ button:hover {
         position: absolute;
         top: 300px;
         justify-content: center;
-        gap: 80px;
+        gap: 30px;
         width: 80%;
 
     }
@@ -184,6 +186,8 @@ button:hover {
         flex: 1;
         font-size: 22px;
         padding: 10px;
+
+
     }
 
     .toggle-mode img {
