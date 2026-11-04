@@ -1,6 +1,32 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 export default function Contact() {
+  const formRef = useRef();
+  const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+  function submitHandler(e) {
+    e.preventDefault();
+    setLoading(true);
+    setStatusMessage("");
+    const SERVICE_ID = "service_nejsw0c";
+    const TEMPLATE_ID = "template_zdwkmxs";
+    const PUBLIC_KEY = "iSuUz6G3I-MhNeqx1";
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+        setStatusMessage("Message sent successfully!");
+        setLoading(false);
+        formRef.current.reset();
+      },
+      (error) => {
+        console.log(error.text);
+        setStatusMessage("Failed to send message. Please try again.");
+        setLoading(false);
+      },
+    );
+  }
   return (
     <main className="px-[20px] sm:px-[50px]  py-[50px]">
       <section>
@@ -15,11 +41,11 @@ export default function Contact() {
       </section>
       <section className="flex flex-col md:flex-row justify-between items-center gap-[5%] ">
         <section className=" bg-[var( --contact-message-bg)] mb-[50px] flex-1 w-[100%] sm:w-[40%] mt-[20px] border-1 border-[var(--border-nav-color)] rounded-[7px]  p-[20px]">
-          <form>
+          <form onSubmit={submitHandler} ref={formRef}>
             <div className="flex flex-col md:flex-row justify-between gap-[10px] ">
-              <div>
+              <div className="w-full">
                 <label
-                  name="name"
+                  htmlFor="name"
                   className="block mb-[5px] text-[var(--font-color)]"
                 >
                   Name
@@ -27,19 +53,21 @@ export default function Contact() {
                 <input
                   type="text"
                   placeholder="Your Name"
+                  name="from-name"
                   className="border-1 border-[var(--border-nav-color)] rounded-[7px] p-[5px] w-[100%] placeholder:text-[var(--nav-link-color)] "
                   required
                 />
               </div>
-              <div>
+              <div className="w-full">
                 <label
-                  name="email"
+                  htmlFor="email"
                   className="block mb-[5px] text-[var(--font-color)]"
                 >
                   Email
                 </label>
                 <input
                   type="email"
+                  name="from-email"
                   placeholder="you@example.com"
                   className="border-1 border-[var(--border-nav-color)] rounded-[7px] p-[5px] w-[100%] placeholder:text-[var(--nav-link-color)]"
                   required
@@ -48,27 +76,24 @@ export default function Contact() {
             </div>
             <div className="mt-[20px]">
               <label
-                name="subject"
+                htmlFor="subject"
                 className="block mb-[5px] text-[var(--font-color)]"
               >
                 Subject
               </label>
               <input
                 type="text"
+                name="subject"
                 placeholder="What is this about ?"
                 className="border-1 border-[var(--border-nav-color)] rounded-[7px] p-[5px] w-[100%] placeholder:text-[var(--nav-link-color)]"
                 required
               />
             </div>
             <div className="mt-[20px]">
-              <label
-                name="subject"
-                className="block mb-[5px] text-[var(--font-color)]"
-              >
+              <label className="block mb-[5px] text-[var(--font-color)]">
                 Message
               </label>
               <textarea
-                type="text"
                 placeholder="Tell me a bit about it..."
                 className="border-1 border-[var(--border-nav-color)] rounded-[7px] p-[10px] w-[100%] h-[300px] placeholder:text-[var(--nav-link-color)]"
                 required
@@ -78,12 +103,18 @@ export default function Contact() {
               type="submit"
               className="text-[var(--font-button-color)] bg-[var(--button-bg-color)] px-[10px] py-[7px] rounded-[10px] mt-[20px]"
             >
-              Send message{" "}
+              {loading ? "Sending..." : "Send message"}
+
               <FontAwesomeIcon
                 icon={faPaperPlane}
                 className="ml-[10px] text-[12px] "
               />
             </button>
+            {statusMessage && (
+              <p className="mt-[15px] text-[14px] text-[var(--nav-font-active)]">
+                {statusMessage}
+              </p>
+            )}
           </form>
         </section>
         <section className="w-[100%] sm:w-[40%]">

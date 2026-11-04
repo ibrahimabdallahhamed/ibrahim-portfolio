@@ -146,11 +146,11 @@ export default function About() {
         </div>
         <div className="flex flex-col  xl:flex-row items-center justify-center gap-[5%]  ">
           {skillCard.map((card) => (
-            <div className="border-[2px] rounded-[30px] px-[50px] border-[var(--border-nav-color)] mb-[30px] py-[50px] w-full xl:w-[30%]   2xl:h-[300px] xl:h-[400px] ">
+            <div className="border-[2px] rounded-[30px] px-[50px] border-[var(--border-nav-color)] mb-[30px] py-[50px] w-full xl:w-[30%]   2xl:h-[350px] xl:h-[450px] ">
               <h3 className="text-[var(--font-color)] text-[36px] font-[700] mb-[30px]">
                 {card.header}
               </h3>
-              <div className="flex items-center justify-between flex-wrap ">
+              <div className="flex items-center justify-between flex-wrap gap-[10px]">
                 {card.skills.map((skill) => (
                   <Skills skill={skill} />
                 ))}

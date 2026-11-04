@@ -56,7 +56,10 @@ export default function Nav() {
             <img src={dark ? navbarSelectionImg : darkSelectionImg} />
           </button>
           <button
-            className="hire-btn text-[var(--font-button-color)]"
+            className="hire-btn text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 
+             hover:from-purple-500 hover:to-blue-500 font-semibold text-[15px] sm:text-[18px] 
+             px-6 py-2.5 rounded-full shadow-lg hover:shadow-purple-500/25 
+             transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 animate-pulse"
             onClick={() => navigate("/contact")}
           >
             Hire me

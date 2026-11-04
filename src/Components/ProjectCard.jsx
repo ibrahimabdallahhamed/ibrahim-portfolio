@@ -1,7 +1,7 @@
 import Skills from "./Skills";
 function ProjectCard({ prop }) {
   return (
-    <div className=" border-[2px] border-solid border-[var(--border-nav-color)] rounded-[10px] p-[2px] md:h-[800px]">
+    <div className=" border-[2px] border-solid border-[var(--border-nav-color)] rounded-[10px] p-[2px] md:h-[900px]">
       <div className="bg-[var(--project-card-bg)] px-[20px] py-[20px]">
         <div className="flex gap-2 mb-5 px-2">
           <span className="inline-block bg-[#526077] w-[10px] h-[10px] rounded-[50%]"></span>

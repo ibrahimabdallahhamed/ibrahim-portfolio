@@ -31,11 +31,13 @@ body {
   --home-downloadcv-bg: #FFFFFF;
   --font-button-color: #FFFFFF;
   --project-card-bg: #F4F6FA;
+  --skill-bg: white;
 
 
 }
 
 [data-theme="dark"] {
+  --skill-bg: #0B0D12;
   --bg-color: #0B0D12;
   --font-color: #FFFFFF;
   --font-button-color: black;
